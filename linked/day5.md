@@ -15,7 +15,7 @@ for includes Big O 1/n
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 have method :
- to string 
+ toString 
  includes 
  insert 
  checkEmpty
