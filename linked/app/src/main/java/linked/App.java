@@ -10,13 +10,16 @@ public class App {
 
     public static void main(String[] args) {
        LinkedList l1=new LinkedList();
-        l1.insert(1);
-        l1.insert(2);
-        l1.insert(3);
-        l1.insert(4);
-        l1.insert(5);
-        l1.print();
+        l1.append(1);
+        l1.append(2);
+        l1.append(3);
 
+
+l1.insertAfter(2,10);
+        l1.insertAfter(10,8);
         System.out.println(l1.toString());
+
+        l1.insertBefor(1,333);
+        System.out.println("inserBefor Linklist "+l1.toString());
     }
 }
