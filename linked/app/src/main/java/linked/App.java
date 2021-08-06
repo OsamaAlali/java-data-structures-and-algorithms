@@ -13,13 +13,21 @@ public class App {
         l1.append(1);
         l1.append(2);
         l1.append(3);
-
-
-l1.insertAfter(2,10);
-        l1.insertAfter(10,8);
+        l1.append(4);
+        l1.append(8);
+        l1.print();
+        System.out.println(l1.size());
         System.out.println(l1.toString());
+        System.out.println("KTH "+l1.kth(2));
+//        System.out.println(l1.palinderom());
 
-        l1.insertBefor(1,333);
+
+//l1.print();
+//l1.insertAfter(2,10);
+//        l1.insertAfter(10,8);
+//        System.out.println(l1.toString());
+//
+//        l1.insertBefor(1,333);
         System.out.println("inserBefor Linklist "+l1.toString());
     }
 }
