@@ -208,4 +208,43 @@ public boolean palinderom(){
         }
     }
 
+    public  LinkedList zipLists( LinkedList list1,LinkedList list2){
+         if (!(list1.checkEmpty() && list2.checkEmpty()))
+         {
+               Node c1,c2;
+             c1 =list1.head;
+             c2=list1.head;
+             int l1=list1.size();
+             int l2=list2.size();
+             int head=list1.head.value;
+             if (l1 >= l2){
+                  while (c1 != null){
+                if (list2.head !=null) {
+                    c2 = c2.next;
+                    c1.next = list2.head;
+                    list2.head = list2.head.next;
+                    c1 = c1.next;
+                    c1.next = c2;
+                    c1 = c2;
+                }else {return list1;}
+                  }
+             }else if (l1 <l2)
+             {
+                 while (list2.head !=null){
+                     if (c1.next != null){
+                         c2 = c2.next;
+                         c1.next = list2.head;
+                         list2.head = list2.head.next;
+                         c1 = c1.next;
+                         c1.next = c2;
+                         c1 = c2;
+                     }else {
+                         c1.next=list2.head;
+                         break;
+                     }
+                 }
+             }
+         }
+        return list1;
+    }
 }
