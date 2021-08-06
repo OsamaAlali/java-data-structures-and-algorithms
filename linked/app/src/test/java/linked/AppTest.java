@@ -12,6 +12,56 @@ class AppTest {
 //        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
 //    }
 
+  //  Where k is greater than the length of the linked list
+
+    @Test void grater()
+    {
+        LinkedList l1=new LinkedList();
+        l1.append(1);
+        l1.append(2);
+        l1.append(3);
+
+       int out= -404;
+
+assertEquals(out,l1.kth(5));
+
+    }
+// Where k and the length of the list are the same
+
+    @Test void sameLingth() {
+        LinkedList l1 = new LinkedList();
+        l1.append(1);
+        l1.append(2);
+        l1.append(3);
+
+        int out = -404;
+
+        assertEquals(out, l1.kth(3));
+    }
+
+    // Where k is not a positive integer
+    @Test void postive() {
+        LinkedList l1 = new LinkedList();
+        l1.append(1);
+        l1.append(2);
+        l1.append(3);
+
+        int out = -404;
+
+        assertEquals(out, l1.kth(-5));
+    }
+    //  Where the linked list is of a size 1
+
+    @Test void size1() {
+        LinkedList l1 = new LinkedList();
+        l1.append(1);
+
+
+        int out = 1;
+
+        assertEquals(out, l1.kth(0));
+    }
+
     @Test void testCreate(){
         LinkedList l2=new LinkedList();
         String listIsCreating="list is Empty";

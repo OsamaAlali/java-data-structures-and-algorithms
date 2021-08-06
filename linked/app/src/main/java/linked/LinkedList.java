@@ -1,5 +1,7 @@
 package linked;
 
+import java.util.ArrayList;
+
 public class LinkedList {
     Node head;
     Node tail;
@@ -102,6 +104,43 @@ public class LinkedList {
             System.out.println("list empty");
         }
     }
+    public int size(){
+        Node current;
+        int count=0;
+        current=head;
+        while (current != null){
+            count++;
+            current=current.next;
+        }
+        return count;
+    }
+    public int kth(int k) {
+        int length = size() ;
+        if ((k < length) && (k >= 0)) {
+            Node search = head;
+            while (length-- >= 0) {
+                if (length == k) {
+                    return search.value;
+                }
+                search = search.next;
+            }
+        }else if (k <0){
+            try {
+                throw new Exception("Negative Not accept");
+            } catch (Exception e) {
+                e.printStackTrace();
+
+            }
+        }else if (k >= length){
+            try {
+                throw new Exception("Out Of Range");
+            } catch (Exception e) {
+                e.printStackTrace();
+
+            }
+        }
+return -404;
+    }
 // check Value if exist in list
     public boolean includes (int val) {
         if (!checkEmpty()) {
@@ -133,16 +172,30 @@ public class LinkedList {
 
       return (msg +"NULL")  ;
     }
-
+public boolean palinderom(){
+        Node fetch=head;
+    ArrayList <Integer> list=new ArrayList<Integer>();
+        while (fetch != null){
+            list.add(fetch.value);
+            fetch=fetch.next;
+        }
+    for (int i = 0; i < list.size()/2; i++) {
+        if (list.get(i)==list.get(list.size()-i-1)){
+            continue;
+        }
+        else {return  false;}
+    }
+        return true;
+}
 
     // Revers Linke list
     public  void reverse(){
         // {5}->{4}->{3}->{2}->{1}->NULL
         // null<-{5}->{4}->{3}->{2}->{1}
         if (!checkEmpty()){
-            Node current = new Node();
-            Node prev=new Node();
-            Node fast=new Node();
+            Node current;
+            Node prev;
+            Node fast;
             prev=null;
             current=head;
             while (current != null) {
