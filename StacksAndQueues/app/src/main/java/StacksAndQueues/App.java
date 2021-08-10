@@ -12,8 +12,6 @@ public class App {
       /// Challeng 12
         Cats c1=new Cats("mem");
         Cats c2=new Cats("m");
-
-
         Dogs d1=new Dogs("mm");
         Dogs d2=new Dogs("meshmed");
 

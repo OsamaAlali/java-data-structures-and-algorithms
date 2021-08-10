@@ -7,6 +7,32 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+  @Test void animal(){
+      Cats c1=new Cats("mem");
+      Dogs d1=new Dogs("mm");
+      AnimalShelter a=new AnimalShelter();
+      a.enqueue(c1);
+      a.enqueue(d1);
+
+      String out = null;
+      assertEquals(out,a.dequeue("swe"));
+
+      out ="Cats{name='mem'}";
+      assertEquals(out,a.dequeue("cat").toString());
+
+
+    out= "Dogs{name='mm'}";
+      assertEquals(out,a.dequeue("dog").toString());
+
+//         out="Queue Is Empty";
+//      assertEquals(out,a.dequeue("dog").toString());
+
+
+  }
+
+
+
+
 
     @Test void testPseudo(){
         PseudoQueue <Integer> p1=new PseudoQueue<Integer>();
