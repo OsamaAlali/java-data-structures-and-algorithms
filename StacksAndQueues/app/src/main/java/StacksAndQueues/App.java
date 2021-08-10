@@ -9,24 +9,52 @@ public class App {
     }
 
     public static void main(String[] args) {
-////// Challeng 11
+      /// Challeng 12
+        Cats c1=new Cats("mem");
+        Cats c2=new Cats("m");
 
-        PseudoQueue <Integer> p1=new PseudoQueue<Integer>();
-        p1.enqueue(1);
-        p1.enqueue(2);
-        p1.enqueue(3);
-        p1.enqueue(4);
 
-        System.out.println(p1.dequeue());
-        System.out.println(p1.dequeue());
+        Dogs d1=new Dogs("mm");
+        Dogs d2=new Dogs("meshmed");
 
-        p1.enqueue(8);
-        p1.enqueue(9);
-        System.out.println(p1.dequeue());
-        System.out.println(p1.dequeue());
-        System.out.println(p1.dequeue());
-        System.out.println(p1.dequeue());
-        System.out.println(p1.dequeue());
+
+
+        AnimalShelter a=new AnimalShelter();
+        a.enqueue(c1);
+        a.enqueue(c2);
+        a.enqueue(d1);
+        a.enqueue(d2);
+
+
+        System.out.println(a.dequeue("t"));
+        System.out.println(a.dequeue("cat").toString());
+        System.out.println(a.dequeue("dog").toString());
+        System.out.println(a.dequeue("dog").toString());
+        System.out.println(a.dequeue("dog").toString());
+
+
+
+
+
+
+        ////// Challeng 11
+
+//        PseudoQueue <Integer> p1=new PseudoQueue<Integer>();
+//        p1.enqueue(1);
+//        p1.enqueue(2);
+//        p1.enqueue(3);
+//        p1.enqueue(4);
+//
+//        System.out.println(p1.dequeue());
+//        System.out.println(p1.dequeue());
+//
+//        p1.enqueue(8);
+//        p1.enqueue(9);
+//        System.out.println(p1.dequeue());
+//        System.out.println(p1.dequeue());
+//        System.out.println(p1.dequeue());
+//        System.out.println(p1.dequeue());
+//        System.out.println(p1.dequeue());
 
 
 
