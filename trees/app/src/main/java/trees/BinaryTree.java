@@ -27,7 +27,7 @@ public class BinaryTree {
             if ( root.right != null ){
                 preOrder(root.right);
             }
-        }// End Main if
+        }// End Main if hg
     }// End Function
 ///  inOrder Left ==>> Root  ==>> Right
     public  void inOrder(Node root){
