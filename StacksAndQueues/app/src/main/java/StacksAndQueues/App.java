@@ -4,31 +4,61 @@
 package StacksAndQueues;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+//    public String getGreeting() {
+//        return "Hello World!";
+//    }
+public  static boolean check(String data){
+    Stack<Character> s=new Stack<Character>();
+    Character onechar;
+    for (int i = 0; i <data.length() ; i++) {
+        onechar=data.charAt(i);
+        if ( (onechar =='(') || (onechar =='{') || (onechar =='[') ){
+
+            s.push(onechar);
+        }else if ( ( onechar == ')' ) || ( onechar == '}') || ( onechar == ']') )
+        { if (!s.isEmpty()){
+
+            Character c=s.pop();
+            if (  ( onechar==')' && c=='(') || ( onechar=='}' && c=='{') || ( onechar==']' && c=='[') ){
+                continue;
+            }else {return false;} // End Nested Of Nested IF statement
+
+        }else {return false;} // End IF statement Check stack empty to  check {}()}
+        }// End elseIf statement
+    }// End for
+    return s.isEmpty();
+}
+
+
 
     public static void main(String[] args) {
-      /// Challeng 12
-        Cats c1=new Cats("mem");
-        Cats c2=new Cats("m");
-        Dogs d1=new Dogs("mm");
-        Dogs d2=new Dogs("meshmed");
+
+try {
+
+    System.out.println(check("{}[5]}"));
+}catch (Exception e){e.printStackTrace();}
 
 
+        /// Challeng 12
+//        Cats c1=new Cats("mem");
+//        Cats c2=new Cats("m");
+//        Dogs d1=new Dogs("mm");
+//        Dogs d2=new Dogs("meshmed");
+//
+//
+//
+//        AnimalShelter a=new AnimalShelter();
+//        a.enqueue(c1);
+//        a.enqueue(c2);
+//        a.enqueue(d1);
+//        a.enqueue(d2);
 
-        AnimalShelter a=new AnimalShelter();
-        a.enqueue(c1);
-        a.enqueue(c2);
-        a.enqueue(d1);
-        a.enqueue(d2);
 
-
-        System.out.println(a.dequeue("t"));
-        System.out.println(a.dequeue("cat").toString());
-        System.out.println(a.dequeue("dog").toString());
-        System.out.println(a.dequeue("dog").toString());
-        System.out.println(a.dequeue("dog").toString());
+//        System.out.println(a.dequeue("t"));
+//        System.out.println(a.dequeue("cat").toString());
+//        System.out.println(a.dequeue("dog").toString());
+//        System.out.println(a.dequeue("dog").toString());
+//        System.out.println(a.dequeue("dog").toString());
 
 
 

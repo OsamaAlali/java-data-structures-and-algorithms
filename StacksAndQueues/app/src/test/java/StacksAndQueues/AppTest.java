@@ -7,53 +7,57 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-  @Test void animal(){
-      Cats c1=new Cats("mem");
-      Dogs d1=new Dogs("mm");
-      AnimalShelter a=new AnimalShelter();
-      a.enqueue(c1);
-      a.enqueue(d1);
+    @Test void  check(){
 
-      String out = null;
-      assertEquals(out,a.dequeue("swe"));
-
-      out ="Cats{name='mem'}";
-      assertEquals(out,a.dequeue("cat").toString());
+        assertEquals(true,App.check("(){}"));
+        assertEquals(true,App.check("(s){[5]}"));
+        assertEquals(true,App.check("{([])}"));
+        assertEquals(false,App.check("{"));
+        assertEquals(false,App.check(")"));
+        assertEquals(false,App.check("[}"));
 
 
-    out= "Dogs{name='mm'}";
-      assertEquals(out,a.dequeue("dog").toString());
-
-//         out="Queue Is Empty";
-//      assertEquals(out,a.dequeue("dog").toString());
-
-
-  }
-
-
-
-
-
-    @Test void testPseudo(){
-        PseudoQueue <Integer> p1=new PseudoQueue<Integer>();
-        p1.enqueue(1);
-        p1.enqueue(2);
-        p1.enqueue(3);
-        p1.enqueue(4);
-        int out =1;
-        assertEquals(out,p1.dequeue());
-
-      int  out2 =2;
-        assertEquals(out2,p1.dequeue());
-        p1.enqueue(6   );
-        p1.enqueue(7);
-        out=3;
-        assertEquals(out,p1.dequeue());
-        p1.dequeue();
-        p1.dequeue();
-        out =7;
-        assertEquals(out,p1.dequeue());
     }
+//  @Test void animal(){
+//      Cats c1=new Cats("mem");
+//      Dogs d1=new Dogs("mm");
+//      AnimalShelter a=new AnimalShelter();
+//      a.enqueue(c1);
+//      a.enqueue(d1);
+//
+//      String out = null;
+//      assertEquals(out,a.dequeue("swe"));
+//
+//      out ="Cats{name='mem'}";
+//      assertEquals(out,a.dequeue("cat").toString());
+//
+//
+//    out= "Dogs{name='mm'}";
+//      assertEquals(out,a.dequeue("dog").toString());
+//
+////         out="Queue Is Empty";
+////      assertEquals(out,a.dequeue("dog").toString());
+//  }
+//    @Test void testPseudo(){
+//        PseudoQueue <Integer> p1=new PseudoQueue<Integer>();
+//        p1.enqueue(1);
+//        p1.enqueue(2);
+//        p1.enqueue(3);
+//        p1.enqueue(4);
+//        int out =1;
+//        assertEquals(out,p1.dequeue());
+//
+//      int  out2 =2;
+//        assertEquals(out2,p1.dequeue());
+//        p1.enqueue(6   );
+//        p1.enqueue(7);
+//        out=3;
+//        assertEquals(out,p1.dequeue());
+//        p1.dequeue();
+//        p1.dequeue();
+//        out =7;
+//        assertEquals(out,p1.dequeue());
+//    }
 //    @Test public void  checkPush(){
 //        Stack<Integer> s=new Stack<>();
 //        s.push(1);
