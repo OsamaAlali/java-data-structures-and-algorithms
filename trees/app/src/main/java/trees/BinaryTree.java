@@ -5,8 +5,6 @@ import java.util.List;
 
 public class BinaryTree {
 
-Node root;
-
 
     public BinaryTree() {
 
@@ -33,7 +31,7 @@ Node root;
     }// End Function
 ///  inOrder Left ==>> Root  ==>> Right
     public  void inOrder(Node root){
-        if (root != null){
+        if (root.left != null){
             inOrder(root.left);
         }
         System.out.println(root.value);

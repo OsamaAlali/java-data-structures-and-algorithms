@@ -1,7 +1,7 @@
 package trees;
 
 public class BinarySearch  extends  BinaryTree{
-
+Node root;
 public  void  add(int value, Node root){
     if (this.root == null ){
        this.root=new Node(value);
