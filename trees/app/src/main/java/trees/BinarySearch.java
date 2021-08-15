@@ -1,7 +1,7 @@
 package trees;
 
 public class BinarySearch  extends  BinaryTree{
-
+Node root;
 public  void  add(int value, Node root){
     if (this.root == null ){
        this.root=new Node(value);
@@ -42,6 +42,17 @@ public boolean contains(int value,Node root){
     }
     return c;
 }
+    int max=0;
+public int maxValue(Node root){
+    if (root.right == null){
+        max=root.value;
+    }
+    if (root.right != null)
+    { maxValue(root.right);}
+
+return max;
+}
+
 
     @Override
     public String toString() {
