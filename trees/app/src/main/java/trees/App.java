@@ -14,19 +14,24 @@ try {
 
     BinarySearch bts=new BinarySearch();
 
-    System.out.println(bts);
+//    System.out.println(bts);
 
 
    bts.add(6,bts.root);
     bts.add(3,bts.root);
     bts.add(1,bts.root);
     bts.add(10,bts.root);
-    bts.add(2,bts.root);
-    bts.add(4,bts.root);
+    bts.add(15,bts.root);
+    bts.add(9,bts.root);
 
-//    System.out.println(bts.contains(3, tree));
-System.out.println(bts);
-    bts.inOrder(bts.root);
+
+    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
+
+
+////    System.out.println(bts.contains(3, tree));
+//System.out.println(bts);
+////    bts.inOrder(bts.root);
+
 
 
 }catch (Exception e){
