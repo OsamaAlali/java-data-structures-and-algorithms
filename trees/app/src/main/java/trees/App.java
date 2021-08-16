@@ -24,8 +24,11 @@ try {
     bts.add(15,bts.root);
     bts.add(9,bts.root);
 
-
-    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
+//////
+//        Bridth first
+//////
+  bts.bredthFirst(bts.root);
+//    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
 
 
 ////    System.out.println(bts.contains(3, tree));

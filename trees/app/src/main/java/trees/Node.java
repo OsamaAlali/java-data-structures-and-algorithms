@@ -4,6 +4,7 @@ public class Node<T> {
     Node left;
     int value;
     Node right;
+    Node next;
     public Node(){
 
     }
