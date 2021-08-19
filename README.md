@@ -13,4 +13,5 @@
 | shelter     | [shelter](day12/d12.md)      |
 | Tree     | [Tree](day15/d15.md)      |
 |  validate brackets  | [Validation](day13/d13.md)      |
+|  tree fizz buzz  | [treefizzbuzz](day18/d18.md)      |
 

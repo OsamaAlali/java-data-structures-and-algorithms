@@ -3,31 +3,90 @@
  */
 package trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
+public static List<String> result=new ArrayList<>();
+public static  List <String>  fizzBuzzTree(KAry node){
+
+    if (node == null){
+
+        return result;
+    }
+
+    int count=node.child.length;
+
+    for (int i = 0; i < count -1; i++) {
+        fizzBuzzTree(node.child[i]);
+
+        if (node.value %3 == 0){
+            result.add("Fizz");
+
+        }else if (node.value % 5 == 0 ){
+
+            result.add("Buzz");
+        }else if (( node.value % 3 == 0 ) && (node.value %5 == 0)){
+
+            result.add("FizzBuzz");
+        }else{
+            String turn=String.valueOf(node.value);
+            result.add(turn);
+        }
+
+    }
+       fizzBuzzTree(node.child[count -1]);
+    return result;
+}
+
+
     public static void main(String[] args) {
 try {
 
 
-    BinarySearch bts=new BinarySearch();
+    KAry root = new KAry(1, 2);
+    root.child[0] = new KAry(2, 2);
+    root.child[1] = new KAry(3, 2);
+    root.child[0].child[0] = new KAry(4, 2);
+    root.child[0].child[1] = new KAry(5, 2);
 
-//    System.out.println(bts);
+    System.out.println(fizzBuzzTree(root));
 
 
-   bts.add(6,bts.root);
-    bts.add(3,bts.root);
-    bts.add(1,bts.root);
-    bts.add(10,bts.root);
-    bts.add(15,bts.root);
-    bts.add(9,bts.root);
 
-//////
-//        Bridth first
-//////
-  bts.bredthFirst(bts.root);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    BinarySearch bts=new BinarySearch();
+//
+////    System.out.println(bts);
+//
+//
+//   bts.add(6,bts.root);
+//    bts.add(3,bts.root);
+//    bts.add(1,bts.root);
+//    bts.add(10,bts.root);
+//    bts.add(15,bts.root);
+//    bts.add(9,bts.root);
+//
+////////
+////        Bridth first
+////////
+//  bts.bredthFirst(bts.root);
 //    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
 
 

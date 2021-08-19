@@ -4,24 +4,48 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+
+    @Test void fuzzBuzz(){
+        KAry root = new KAry(1, 2);
+        root.child[0] = new KAry(2, 2);
+        root.child[1] = new KAry(3, 2);
+        root.child[0].child[0] = new KAry(4, 2);
+        root.child[0].child[1] = new KAry(5, 2);
+
+        List<String> list=new ArrayList<>();
+        list.add("4");
+        list.add("2");
+        list.add("Buzz");
+        list.add("1");
+        list.add("Fizz");
+
+        assertEquals(list,App.fizzBuzzTree(root));
+    }
+
+
+
 //    @Test void appHasAGreeting() {
 //        App classUnderTest = new App();
 //        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
 //    }
-    @Test void tree(){
-BinarySearch bts=new BinarySearch();
-String out="BinarySearch{root=null}";
-assertEquals(out,bts.toString());
-
-Node n=new Node(6);
-
-bts.add(3,n);
-String  out1 ="BinarySearch{root=null}";
-assertNotEquals(out,bts.toString());
-
-
-    }
+//    @Test void tree(){
+//BinarySearch bts=new BinarySearch();
+//String out="BinarySearch{root=null}";
+//assertEquals(out,bts.toString());
+//
+//Node n=new Node(6);
+//
+//bts.add(3,n);
+//String  out1 ="BinarySearch{root=null}";
+//assertNotEquals(out,bts.toString());
+//
+//
+//    }
 }
