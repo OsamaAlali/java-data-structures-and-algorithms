@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
+    // Code 18
     @Test void fuzzBuzz(){
         KAry root = new KAry(1, 2);
         root.child[0] = new KAry(2, 2);
@@ -30,6 +31,22 @@ class AppTest {
     }
 
 
+    // code 17
+
+//    @Test void breadith(){
+//        BinarySearch bts=new BinarySearch();
+//
+//        bts.add(6,bts.root);
+//        bts.add(3,bts.root);
+//        bts.add(1,bts.root);
+//        bts.add(10,bts.root);
+//        bts.add(15,bts.root);
+//        bts.add(9,bts.root);
+//
+//
+//
+//        assertEquals("63101915",bts.bredthFirst(bts.root));
+//    }
 
 //    @Test void appHasAGreeting() {
 //        App classUnderTest = new App();

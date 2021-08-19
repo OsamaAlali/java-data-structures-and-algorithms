@@ -23,7 +23,7 @@ List<Integer> list=new ArrayList<Integer>();
              if (front.right != null){
                  breadth.enqueue(front.right);
              }
-             System.out.println(front.value);
+             System.out.print(front.value);
          }
 
     }

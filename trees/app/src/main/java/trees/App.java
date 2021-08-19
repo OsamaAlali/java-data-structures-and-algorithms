@@ -48,45 +48,46 @@ public static  List <String>  fizzBuzzTree(KAry node){
 try {
 
 
-    KAry root = new KAry(1, 2);
-    root.child[0] = new KAry(2, 2);
-    root.child[1] = new KAry(3, 2);
-    root.child[0].child[0] = new KAry(4, 2);
-    root.child[0].child[1] = new KAry(5, 2);
-
-    System.out.println(fizzBuzzTree(root));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    BinarySearch bts=new BinarySearch();
+//    KAry root = new KAry(1, 2);
+//    root.child[0] = new KAry(2, 2);
+//    root.child[1] = new KAry(3, 2);
+//    root.child[0].child[0] = new KAry(4, 2);
+//    root.child[0].child[1] = new KAry(5, 2);
 //
-////    System.out.println(bts);
-//
-//
-//   bts.add(6,bts.root);
-//    bts.add(3,bts.root);
-//    bts.add(1,bts.root);
-//    bts.add(10,bts.root);
-//    bts.add(15,bts.root);
-//    bts.add(9,bts.root);
-//
-////////
-////        Bridth first
-////////
-//  bts.bredthFirst(bts.root);
+//    System.out.println(fizzBuzzTree(root));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    BinarySearch bts=new BinarySearch();
+
+//    System.out.println(bts);
+
+
+   bts.add(6,bts.root);
+    bts.add(3,bts.root);
+    bts.add(1,bts.root);
+    bts.add(10,bts.root);
+    bts.add(15,bts.root);
+    bts.add(9,bts.root);
+
+//////
+//        Bridth first
+//////
+  bts.bredthFirst(bts.root);
+
 //    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
 
 
