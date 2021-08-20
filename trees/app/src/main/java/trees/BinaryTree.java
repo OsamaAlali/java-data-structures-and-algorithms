@@ -63,4 +63,15 @@ List<Integer> list=new ArrayList<Integer>();
         }
         System.out.println(root.value);
     }
+
+    int max=0;
+    public int maxValue(Node root){
+        if (root.right == null){
+            max=root.value;
+        }
+        if (root.right != null)
+        { maxValue(root.right);}
+
+        return max;
+    }
 }

@@ -87,8 +87,8 @@ try {
 //        Bridth first
 //////
   bts.bredthFirst(bts.root);
-
-//    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
+//  Max Value
+    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
 
 
 ////    System.out.println(bts.contains(3, tree));
