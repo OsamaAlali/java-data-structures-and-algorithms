@@ -11,6 +11,20 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
+// code 16
+    @Test void max(){
+        BinarySearch bts=new BinarySearch();
+
+        bts.add(6,bts.root);
+        bts.add(3,bts.root);
+        bts.add(1,bts.root);
+        bts.add(10,bts.root);
+        bts.add(15,bts.root);
+        bts.add(9,bts.root);
+
+        assertEquals(15, bts.maxValue(bts.root));
+
+    }
 
     // Code 18
     @Test void fuzzBuzz(){

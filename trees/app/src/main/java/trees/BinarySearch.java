@@ -42,16 +42,7 @@ public boolean contains(int value,Node root){
     }
     return c;
 }
-    int max=0;
-public int maxValue(Node root){
-    if (root.right == null){
-        max=root.value;
-    }
-    if (root.right != null)
-    { maxValue(root.right);}
 
-return max;
-}
 
 
     @Override
