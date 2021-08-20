@@ -11,11 +11,12 @@ public class App {
     public static void main(String[] args) {
 try {
 
+// code 16 Fixed return the max
+
+
+
 
     BinarySearch bts=new BinarySearch();
-
-//    System.out.println(bts);
-
 
    bts.add(6,bts.root);
     bts.add(3,bts.root);
@@ -23,12 +24,14 @@ try {
     bts.add(10,bts.root);
     bts.add(15,bts.root);
     bts.add(9,bts.root);
+    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
 
-//////
-//        Bridth first
-//////
-  bts.bredthFirst(bts.root);
-//    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
+//
+////////
+////        Bridth first
+////////
+//  bts.bredthFirst(bts.root);
+
 
 
 ////    System.out.println(bts.contains(3, tree));

@@ -24,4 +24,19 @@ assertNotEquals(out,bts.toString());
 
 
     }
+
+    // code 18
+    @Test void max(){
+        BinarySearch bts=new BinarySearch();
+
+        bts.add(6,bts.root);
+        bts.add(3,bts.root);
+        bts.add(1,bts.root);
+        bts.add(10,bts.root);
+        bts.add(15,bts.root);
+        bts.add(9,bts.root);
+
+        assertEquals(15,bts.maxValue(bts.root));
+        assertNotEquals(9 ,bts.maxValue(bts.root));
+    }
 }
