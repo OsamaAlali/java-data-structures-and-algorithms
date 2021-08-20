@@ -15,3 +15,5 @@
 |  validate brackets  | [Validation](day13/d13.md)      |
 |  tree fizz buzz  | [treefizzbuzz](day18/d18.md)      |
 |  bredthFirst | [bredthFirst](day17/d17.md)      |
+| max | [max](day16/d16.md)      |
+
