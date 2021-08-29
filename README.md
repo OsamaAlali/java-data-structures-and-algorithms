@@ -17,3 +17,5 @@
 |  bredthFirst | [bredthFirst](day17/d17.md)      |
 | max | [max](day16/d16.md)      |
 
+|Insertion sort | [insertionSort](sort/readme/d26.md)      |
+
