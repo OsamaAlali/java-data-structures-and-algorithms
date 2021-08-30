@@ -12,9 +12,15 @@ class AppTest {
 //        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
 //    }
 
-    @Test void sort(){
+//    @Test void sort(){
+//        int []arr={5,4,1};
+//        int []out={1,4,5};
+//        assertArrayEquals(out,App.sort(arr));
+//    }
+
+    @Test void  mergeSort(){
         int []arr={5,4,1};
         int []out={1,4,5};
-        assertArrayEquals(out,App.sort(arr));
+        assertArrayEquals(out,App.mergeSort(arr));
     }
 }

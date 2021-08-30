@@ -8,27 +8,87 @@ import java.util.Arrays;
 
 public class App {
 
-    public static int[] sort(int []arr){
-        int k;
-        int temp;
-        for (int i=1; i< arr.length;i++) {
-                k = arr[i];
-                temp = i;
-                while (temp > 0 && (arr[temp - 1] > k)) {
-                        k = arr[temp];
-                        arr[temp] = arr[temp - 1];
-                        arr[temp - 1] = k;
-                     --temp;
-                    }
+//    public static int[] sort(int []arr){
+//        int k;
+//        int temp;
+//        for (int i=1; i< arr.length;i++) {
+//                k = arr[i];
+//                temp = i;
+//                while (temp > 0 && (arr[temp - 1] > k)) {
+//                        k = arr[temp];
+//                        arr[temp] = arr[temp - 1];
+//                        arr[temp - 1] = k;
+//                     --temp;
+//                    }
+//
+//        }
+//        return arr;
+//    }
 
+    public static void merge(int[]left,int[]right,int[]arr){
+        int i=0;
+        int  j=0;
+        int  k =0;
+
+        while ((i < left.length) && (j < right.length)){
+
+            if (left[i] <= right[j])
+            {
+                arr[k]=left[i];
+                i++;
+            }else{
+                arr[k]=right[j];
+                j++;
+            }
+            k++;
+        }//end While
+        if (i == left.length){
+            for (int l = j; l <right.length ; l++) {
+                arr[k]= right[l];
+                k++;
+            }
+        }else{
+                for (int l = i; l <left.length ; l++) {
+                    arr[k]= left[l];
+                    k++;
+            }
         }
+    }
+
+
+    public static int [] mergeSort(int []arr){
+        int n= arr.length;
+        if(n > 1){
+            int mid =n/2;
+            int []left=new int[mid];
+            int []right;
+              if (n % 2 == 0){
+                  right=new int[mid];
+              }else { right=new int[mid + 1];}
+
+            for (int i = 0; i <mid ; i++) {
+                left[i]=arr[i];
+                System.out.println("Left ="+Arrays.toString(left));
+            }
+            for (int j = 0; j < right.length ; j++) {
+                right[j]=arr[mid+j];
+                System.out.println("Right ="+Arrays.toString(right));
+            }
+
+            mergeSort(left);
+            mergeSort(right);
+            merge(left,right,arr);
+        }//end IF N > 1
+
+
         return arr;
     }
 
     public static void main(String[] args) {
 
 int []ar={7,4,6,5,9,8,2,1};
-        System.out.println(Arrays.toString(sort(ar)));
+
+        System.out.println(Arrays.toString(mergeSort(ar)));
 
     }
 }

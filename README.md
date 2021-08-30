@@ -19,3 +19,6 @@
 
 |Insertion sort | [insertionSort](sort/readme/d26.md)      |
 
+|MergeSort | [MergeSort](sort/readme/d26.md)      |
+
+
