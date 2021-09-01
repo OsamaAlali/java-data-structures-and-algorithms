@@ -24,6 +24,45 @@ public class App {
 //        }
 //        return arr;
 //    }
+public static int[] quickSort(int []arr,int left,int right){
+if(left < right) {
+    int position = partition(arr, left, right);
+
+    quickSort(arr, left, position - 1);
+
+    quickSort(arr, position + 1, right);
+}
+    return arr;
+}
+
+    public static int partition(int []arr , int left,  int right){
+
+    int pivot = arr[right];
+    int low = left - 1 ;
+
+        for (int i = low; i <= right ; i++) {
+            if (arr[i] <= pivot ){
+                low++;
+                swap(arr,i,low);
+            }
+        }
+
+        swap(arr, right, low + 1);
+    return low + 1 ;
+    }
+
+
+    public static void swap(int[]arr, int i,int low){
+
+        int temp;
+        temp=arr[i];
+        arr[i]=arr[low];
+        arr[low]=temp;
+
+    }
+
+
+
 
     public static void merge(int[]left,int[]right,int[]arr){
         int i=0;
@@ -86,9 +125,13 @@ public class App {
 
     public static void main(String[] args) {
 
-int []ar={7,4,6,5,9,8,2,1};
+   int []ar={7,4,6,5,9,8,2,1};
+try {
 
-        System.out.println(Arrays.toString(mergeSort(ar)));
+    System.out.println(Arrays.toString(quickSort(ar,0,7)));
+}catch (Exception e){
+    e.printStackTrace();
+}
 
     }
 }
