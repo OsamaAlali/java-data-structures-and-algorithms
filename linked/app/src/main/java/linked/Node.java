@@ -8,7 +8,7 @@ public Node(){
 }
     public  Node(int num){
        this.value=num;
-       this.next=null;
+
     }
 
 
