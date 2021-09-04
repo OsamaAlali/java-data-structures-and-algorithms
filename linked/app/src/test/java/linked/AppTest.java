@@ -14,122 +14,122 @@ class AppTest {
 
   //  Where k is greater than the length of the linked list
 
-    @Test void grater()
-    {
-        LinkedList l1=new LinkedList();
-        l1.append(1);
-        l1.append(2);
-        l1.append(3);
-
-       int out= -404;
-
-assertEquals(out,l1.kth(5));
-
-    }
+//    @Test void grater()
+//    {
+//        LinkedList l1=new LinkedList();
+//        l1.append(1);
+//        l1.append(2);
+//        l1.append(3);
+//
+//       int out= -404;
+//
+//assertEquals(out,l1.kth(5));
+//
+//    }
 // Where k and the length of the list are the same
 
-    @Test void sameLingth() {
-        LinkedList l1 = new LinkedList();
-        l1.append(1);
-        l1.append(2);
-        l1.append(3);
+//    @Test void sameLingth() {
+//        LinkedList l1 = new LinkedList();
+//        l1.append(1);
+//        l1.append(2);
+//        l1.append(3);
+//
+//        int out = -404;
+//
+//        assertEquals(out, l1.kth(3));
+//    }
+//
+//    // Where k is not a positive integer
+//    @Test void postive() {
+//        LinkedList l1 = new LinkedList();
+//        l1.append(1);
+//        l1.append(2);
+//        l1.append(3);
 
-        int out = -404;
-
-        assertEquals(out, l1.kth(3));
-    }
-
-    // Where k is not a positive integer
-    @Test void postive() {
-        LinkedList l1 = new LinkedList();
-        l1.append(1);
-        l1.append(2);
-        l1.append(3);
-
-        int out = -404;
-
-        assertEquals(out, l1.kth(-5));
-    }
+//        int out = -404;
+//
+//        assertEquals(out, l1.kth(-5));
+//    }
     //  Where the linked list is of a size 1
 
-    @Test void size1() {
-        LinkedList l1 = new LinkedList();
-        l1.append(1);
+//    @Test void size1() {
+//        LinkedList l1 = new LinkedList();
+//        l1.append(1);
+//
+//
+//        int out = 1;
+//
+//        assertEquals(out, l1.kth(0));
+//    }
 
-
-        int out = 1;
-
-        assertEquals(out, l1.kth(0));
-    }
-
-    @Test void testCreate(){
-        LinkedList l2=new LinkedList();
-        String listIsCreating="list is Empty";
-        assertEquals(listIsCreating,l2.toString());
-    }
-    @Test void insert(){
-        LinkedList l2=new LinkedList();
-        l2.insert(2);
-
-        boolean empty;
-        empty = false;
-
-        assertEquals(empty,l2.checkEmpty());
-    }
-    @Test void  head(){
-        LinkedList l3=new LinkedList();
-        l3.insert(2);
-
-        int expected=2;
-
-        assertEquals(expected,l3.head.value);
-    }
-    @Test void multiple(){
-        LinkedList l2=new LinkedList();
-        l2.insert(1);
-        l2.insert(2);
-
-        String expected="{2}->{1}->NULL";
-
-        assertEquals(expected,l2.toString());
-
-    }
-    @Test void checkVlaueTrue(){
-        LinkedList l2=new LinkedList();
-        l2.insert(1);
-        l2.insert(2);
-        l2.insert(3);
-        l2.insert(4);
-
-        boolean expected;
-        expected = true;
-
-        assertEquals(expected,l2.includes(3));
-    }
-    @Test void checkVlaueFalse(){
-        LinkedList l2=new LinkedList();
-        l2.insert(1);
-        l2.insert(2);
-
-        l2.insert(4);
-
-        boolean found;
-        found = false;
-
-        assertEquals(found,l2.includes(3));
-    }
-
-    @Test void retrunCollection(){
-        LinkedList l2=new LinkedList();
-        l2.insert(1);
-        l2.insert(2);
-        l2.insert(3);
-        l2.insert(4);
-        l2.insert(5);
-
-        String expected="{5}->{4}->{3}->{2}->{1}->NULL";
-
-        assertEquals(expected,l2.toString());
-
-    }
+//    @Test void testCreate(){
+//        LinkedList l2=new LinkedList();
+//        String listIsCreating="list is Empty";
+//        assertEquals(listIsCreating,l2.toString());
+//    }
+//    @Test void insert(){
+//        LinkedList l2=new LinkedList();
+//        l2.insert(2);
+//
+//        boolean empty;
+//        empty = false;
+//
+//        assertEquals(empty,l2.checkEmpty());
+//    }
+//    @Test void  head(){
+//        LinkedList l3=new LinkedList();
+//        l3.insert(2);
+//
+//        int expected=2;
+//
+//        assertEquals(expected,l3.head.value);
+//    }
+//    @Test void multiple(){
+//        LinkedList l2=new LinkedList();
+//        l2.insert(1);
+//        l2.insert(2);
+//
+//        String expected="{2}->{1}->NULL";
+//
+//        assertEquals(expected,l2.toString());
+//
+//    }
+//    @Test void checkVlaueTrue(){
+//        LinkedList l2=new LinkedList();
+//        l2.insert(1);
+//        l2.insert(2);
+//        l2.insert(3);
+//        l2.insert(4);
+//
+//        boolean expected;
+//        expected = true;
+//
+//        assertEquals(expected,l2.includes(3));
+//    }
+//    @Test void checkVlaueFalse(){
+//        LinkedList l2=new LinkedList();
+//        l2.insert(1);
+//        l2.insert(2);
+//
+//        l2.insert(4);
+//
+//        boolean found;
+//        found = false;
+//
+//        assertEquals(found,l2.includes(3));
+//    }
+//
+//    @Test void retrunCollection(){
+//        LinkedList l2=new LinkedList();
+//        l2.insert(1);
+//        l2.insert(2);
+//        l2.insert(3);
+//        l2.insert(4);
+//        l2.insert(5);
+//
+//        String expected="{5}->{4}->{3}->{2}->{1}->NULL";
+//
+//        assertEquals(expected,l2.toString());
+//
+//    }
 }
