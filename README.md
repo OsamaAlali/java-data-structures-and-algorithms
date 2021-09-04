@@ -21,4 +21,6 @@
 
 |MergeSort | [MergeSort](sort/readme/d26.md)      |
 
+|hash Table | [MergeSort](day30/d30.md)      |
+
 
