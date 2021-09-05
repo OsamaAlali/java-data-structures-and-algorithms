@@ -3,31 +3,82 @@
  */
 package Hash.Table;
 
+import com.sun.source.tree.WhileLoopTree;
+
 public class App {
+
+  public static String repated(String name) {
+       String all=name;
+       int spaceIndex=name.indexOf(" ",2);
+         String word= all.substring(0,spaceIndex);
+         all=all.substring(spaceIndex+1,all.length());
+         String search= all;
+         String checkWord="";
+//         spaceIndex=search.indexOf(" ",2);
+       while (! all.isBlank()){
+
+           while (!search.isBlank()){
+               if(search.indexOf(" ",1)!= -1){
+                   spaceIndex=search.indexOf(" ",1);
+                   checkWord= search.substring(0,spaceIndex);
+                   search=search.substring(spaceIndex+1,search.length());
+
+               }else {
+                   checkWord=search;
+                   search="";
+               }
+               if (word.equals(checkWord)){
+                   return word;
+               }
+
+
+           }// nested while
+if (all.indexOf(" ",2)!= -1){
+    spaceIndex=all.indexOf(" ",1);
+    word=all.substring(0,spaceIndex);
+    all=all.substring(spaceIndex +1 ,all.length());
+    search=all;
+    spaceIndex=search.indexOf(" ",1);
+}else {
+    return "NO Repeat";
+}
+
+       }//end main while
+
+        return "No Repeat";
+    }
 
 
     public static void main(String[] args) {
-
-HashTable m=new HashTable(5);
-m.push(15,"osama");
-m.push(4,"Alli");
-m.push(2,"Mohammad");
-m.push(3,"OQlah");
-m.push(14,"14444");
-m.push(15,"15555");
-m.push(16,"16666");
-m.push(17,"17777");
-m.push(18,"18888");
-
 try {
-    System.out.println(m.get(20));//item not found
 
-    System.out.println(m.contains(18));
-}catch (Exception e){
-    e.printStackTrace();
+    System.out.println(repated("osama baniAta ahmad b5aniAta"));
+}catch (Exception i){
+    i.printStackTrace();
 }
-//m.printArray();
-//        System.out.println(m.toString());
 
+
+//HashTable m=new HashTable(5);
+//m.push(15,"osama");
+//m.push(4,"Alli");
+//m.push(2,"Mohammad");
+//m.push(3,"OQlah");
+//m.push(14,"14444");
+//m.push(15,"15555");
+//m.push(16,"16666");
+//m.push(17,"17777");
+//m.push(18,"18888");
+//
+//try {
+//    System.out.println(m.get(20));//item not found
+//
+//    System.out.println(m.contains(18));
+//}catch (Exception e){
+//    e.printStackTrace();
+//}
+////m.printArray();
+////        System.out.println(m.toString());
+//
+//    }
     }
 }

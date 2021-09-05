@@ -8,15 +8,31 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
-    @Test  void  add(){
-        HashTable m=new HashTable(5);
-        m.push(10,"osama111");
-        String out="osama111";
-        assertEquals(out,m.get(10));
+    @Test void repe(){
+        // test Repeat method
+        String out="osama";
 
-        // Successfully returns null for a key that does not exist in the hashtable
+        assertEquals(out,App.repated("osama alali mohamad osama"));
 
-        String out1= "item not Found";
-        assertEquals(out1,m.get(15));
+        // test with repeated word in secound index
+        assertEquals(out,App.repated("alali osama mohamad osama"));
+
+        assertEquals("NO Repeat",App.repated("alali mohamad osama"));
+
+
     }
+
+
+
+//    @Test  void  add(){
+//        HashTable m=new HashTable(5);
+//        m.push(10,"osama111");
+//        String out="osama111";
+//        assertEquals(out,m.get(10));
+//
+//        // Successfully returns null for a key that does not exist in the hashtable
+//
+//        String out1= "item not Found";
+//        assertEquals(out1,m.get(15));
+//    }
 }
