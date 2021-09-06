@@ -11,41 +11,96 @@ public class App {
         return "Hello World!";
     }
 
-public static List<String> result=new ArrayList<>();
-public static  List <String>  fizzBuzzTree(KAry node){
+//public static List<String> result=new ArrayList<>();
+//public static  List <String>  fizzBuzzTree(KAry node){
+//
+//    if (node == null){
+//
+//        return result;
+//    }
+//
+//    int count=node.child.length;
+//
+//    for (int i = 0; i < count -1; i++) {
+//        fizzBuzzTree(node.child[i]);
+//
+//        if (node.value %3 == 0){
+//            result.add("Fizz");
+//
+//        }else if (node.value % 5 == 0 ){
+//
+//            result.add("Buzz");
+//        }else if (( node.value % 3 == 0 ) && (node.value %5 == 0)){
+//
+//            result.add("FizzBuzz");
+//        }else{
+//            String turn=String.valueOf(node.value);
+//            result.add(turn);
+//        }
+//
+//    }
+//       fizzBuzzTree(node.child[count -1]);
+//    return res
 
-    if (node == null){
-
-        return result;
-    }
-
-    int count=node.child.length;
-
-    for (int i = 0; i < count -1; i++) {
-        fizzBuzzTree(node.child[i]);
-
-        if (node.value %3 == 0){
-            result.add("Fizz");
-
-        }else if (node.value % 5 == 0 ){
-
-            result.add("Buzz");
-        }else if (( node.value % 3 == 0 ) && (node.value %5 == 0)){
-
-            result.add("FizzBuzz");
-        }else{
-            String turn=String.valueOf(node.value);
-            result.add(turn);
+/// Challeng32 write method take 2 tree
+   static List <Integer> list =new ArrayList<>();
+    public static List treeIntersection(Node firstTree,Node secondTree){
+        BinarySearch b=new BinarySearch();
+        if(b.contains(firstTree.value ,secondTree)){
+            list.add(firstTree.value) ;
         }
-
-    }
-       fizzBuzzTree(node.child[count -1]);
-    return result;
-}
+        if (firstTree.left != null){
+            treeIntersection(firstTree.left,secondTree);
+        }
+        if(firstTree.right != null){
+            treeIntersection(firstTree.right,secondTree);
+        }
+      return list;
+//        if(firstTree.value == secondTree.value){
+////            list.add(firstTree.value);
+//            System.out.println(firstTree.value);
+//        }
+//        if (secondTree.left != null && firstTree.value != secondTree.value){
+//            treeIntersection(firstTree,secondTree.left);
+//        }
+//        if (secondTree.right != null && firstTree.value != secondTree.value){
+//            treeIntersection(firstTree,secondTree.right);
+//        }
+//        if (firstTree.left != null){
+//            treeIntersection(firstTree.left,secondTree);
+//        }
+//        if(firstTree.right != null){
+//            treeIntersection(firstTree.right,secondTree);
+//        }
+    }//endFunction
 
 
     public static void main(String[] args) {
 try {
+    BinaryTree bts=new BinaryTree();
+    bts.addBinaryTree(6,bts.root);
+    bts.addBinaryTree(9,bts.root);
+    bts.addBinaryTree(5,bts.root);
+    bts.addBinaryTree(3,bts.root);
+    bts.addBinaryTree(10,bts.root);
+    bts.addBinaryTree(1,bts.root);
+    bts.preOrder(bts.root);
+    System.out.println();
+    BinaryTree bts2=new BinaryTree();
+    bts2.addBinaryTree(5,bts2.root);
+    bts2.addBinaryTree(4,bts2.root);
+    bts2.addBinaryTree(10,bts2.root);
+    bts2.addBinaryTree(2,bts2.root);
+    bts2.addBinaryTree(8,bts2.root);
+    bts2.addBinaryTree(9,bts2.root);
+    bts2.preOrder(bts2.root);
+    System.out.println("#######");
+
+    List list;
+  list= treeIntersection(bts.root,bts2.root);
+    for (Object o : list) {
+        System.out.println(o);
+    }
 
 
 //    KAry root = new KAry(1, 2);
@@ -57,38 +112,18 @@ try {
 //    System.out.println(fizzBuzzTree(root));
 
 
+//    BinarySearch bts=new BinarySearch();
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-    BinarySearch bts=new BinarySearch();
-
-//    System.out.println(bts);
-
-
-   bts.add(6,bts.root);
-    bts.add(3,bts.root);
-    bts.add(1,bts.root);
-    bts.add(10,bts.root);
-    bts.add(15,bts.root);
-    bts.add(9,bts.root);
-
+//    System.out.println(bts.contains(67, bts.root));
 //////
 //        Bridth first
 //////
-  bts.bredthFirst(bts.root);
+//  bts.bredthFirst(bts.root);
 //  Max Value
-    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
+//    System.out.println("the MAx Value is "+bts.maxValue( bts.root));
 
 
 ////    System.out.println(bts.contains(3, tree));

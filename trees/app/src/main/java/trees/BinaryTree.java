@@ -11,6 +11,31 @@ Node root;
     }
 List<Integer> list=new ArrayList<Integer>();
 
+
+    public  void  addBinaryTree(int value, Node root){
+        if (this.root == null ){
+            this.root=new Node(value);
+            return;
+        }
+        if (root.value > value){
+            if (root.left == null){
+                root.left= new Node(value);
+                return;
+            }
+            addBinaryTree(value,root.left);
+        }
+
+        if (root.value < value){
+            if (root.right==null)
+            { root.right= new Node(value);
+                return;
+            }
+
+            addBinaryTree(value,root.right);
+        }
+
+    }
+
     public void bredthFirst(Node root){
 
         Queue breadth=new Queue();
@@ -31,7 +56,7 @@ List<Integer> list=new ArrayList<Integer>();
     // PreOrder Root =>> Left =>> Right
     public  void preOrder(Node root){
         if ( root != null ){
-            System.out.println(root.value);
+            System.out.print(" "+root.value+" ");
             if (root.left !=null){
                 preOrder(root.left);
             }
@@ -61,7 +86,7 @@ List<Integer> list=new ArrayList<Integer>();
         if (root.right != null){
             postOrder( root.right);
         }
-        System.out.println(root.value);
+        System.out.print(" "+root.value+" ");
     }
 
     int max=0;

@@ -16,13 +16,11 @@ public class App {
          String checkWord="";
 //         spaceIndex=search.indexOf(" ",2);
        while (! all.isBlank()){
-
            while (!search.isBlank()){
                if(search.indexOf(" ",1)!= -1){
                    spaceIndex=search.indexOf(" ",1);
                    checkWord= search.substring(0,spaceIndex);
                    search=search.substring(spaceIndex+1,search.length());
-
                }else {
                    checkWord=search;
                    search="";
@@ -30,8 +28,6 @@ public class App {
                if (word.equals(checkWord)){
                    return word;
                }
-
-
            }// nested while
 if (all.indexOf(" ",2)!= -1){
     spaceIndex=all.indexOf(" ",1);
@@ -42,9 +38,7 @@ if (all.indexOf(" ",2)!= -1){
 }else {
     return "NO Repeat";
 }
-
        }//end main while
-
         return "No Repeat";
     }
 
@@ -52,7 +46,7 @@ if (all.indexOf(" ",2)!= -1){
     public static void main(String[] args) {
 try {
 
-    System.out.println(repated("osama baniAta ahmad b5aniAta"));
+    System.out.println(repated("osama baniAta baniAta ahmad b5aniAta osama"));
 }catch (Exception i){
     i.printStackTrace();
 }

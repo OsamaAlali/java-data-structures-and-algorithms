@@ -2,11 +2,11 @@ package trees;
 
 import java.util.List;
 
-public class Node<T> {
-    Node left;
+public class Node <T>{
+    Node  left;
     int value;
     Node right;
-    Node next;
+    Node  next;
 
 
     public Node(){

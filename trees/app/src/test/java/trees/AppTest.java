@@ -11,38 +11,71 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-// code 16
-    @Test void max(){
-        BinarySearch bts=new BinarySearch();
 
-        bts.add(6,bts.root);
-        bts.add(3,bts.root);
-        bts.add(1,bts.root);
-        bts.add(10,bts.root);
-        bts.add(15,bts.root);
-        bts.add(9,bts.root);
+    /// Test Challenge 32
 
-        assertEquals(15, bts.maxValue(bts.root));
+    @Test public  void treeInsert(){
+        BinaryTree bts=new BinaryTree();
+        bts.addBinaryTree(6,bts.root);
+        bts.addBinaryTree(9,bts.root);
+        bts.addBinaryTree(5,bts.root);
+        bts.addBinaryTree(3,bts.root);
+        bts.addBinaryTree(10,bts.root);
+        bts.addBinaryTree(1,bts.root);
 
+        BinaryTree bts2=new BinaryTree();
+        bts2.addBinaryTree(5,bts2.root);
+        bts2.addBinaryTree(4,bts2.root);
+        bts2.addBinaryTree(10,bts2.root);
+        bts2.addBinaryTree(2,bts2.root);
+        bts2.addBinaryTree(8,bts2.root);
+        bts2.addBinaryTree(9,bts2.root);
+
+        List<Integer> out = new ArrayList<Integer>();
+        out.add(5);
+        out.add(9);
+        out.add(10);
+
+        assertEquals(out,App.treeIntersection(bts.root,bts2.root));
     }
+
+
+
+
+
+
+// code 16
+//    @Test void max(){
+//        BinarySearch bts=new BinarySearch();
+//
+//        bts.add(6,bts.root);
+//        bts.add(3,bts.root);
+//        bts.add(1,bts.root);
+//        bts.add(10,bts.root);
+//        bts.add(15,bts.root);
+//        bts.add(9,bts.root);
+//
+//        assertEquals(15, bts.maxValue(bts.root));
+
+//    }
 
     // Code 18
-    @Test void fuzzBuzz(){
-        KAry root = new KAry(1, 2);
-        root.child[0] = new KAry(2, 2);
-        root.child[1] = new KAry(3, 2);
-        root.child[0].child[0] = new KAry(4, 2);
-        root.child[0].child[1] = new KAry(5, 2);
-
-        List<String> list=new ArrayList<>();
-        list.add("4");
-        list.add("2");
-        list.add("Buzz");
-        list.add("1");
-        list.add("Fizz");
-
-        assertEquals(list,App.fizzBuzzTree(root));
-    }
+//    @Test void fuzzBuzz(){
+//        KAry root = new KAry(1, 2);
+//        root.child[0] = new KAry(2, 2);
+//        root.child[1] = new KAry(3, 2);
+//        root.child[0].child[0] = new KAry(4, 2);
+//        root.child[0].child[1] = new KAry(5, 2);
+//
+//        List<String> list=new ArrayList<>();
+//        list.add("4");
+//        list.add("2");
+//        list.add("Buzz");
+//        list.add("1");
+//        list.add("Fizz");
+//
+//        assertEquals(list,App.fizzBuzzTree(root));
+//    }
 
 
     // code 17
