@@ -24,4 +24,6 @@
 |hash Table | [HashTable](day30/d30.md)      |
 |repreat | [Repeate](day31/d31.md)      |
 
+|tree intersection | [tree intersection](day32/d32.md)      |
+
 
