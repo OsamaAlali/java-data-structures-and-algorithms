@@ -25,5 +25,6 @@
 |repreat | [Repeate](day31/d31.md)      |
 
 |tree intersection | [tree intersection](day32/d32.md)      |
+|leftJoin | [LeftJoin](day33/d33.md)      |
 
 

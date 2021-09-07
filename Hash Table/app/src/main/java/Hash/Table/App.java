@@ -5,6 +5,10 @@ package Hash.Table;
 
 import com.sun.source.tree.WhileLoopTree;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
 public class App {
 
   public static String repated(String name) {
@@ -42,16 +46,49 @@ if (all.indexOf(" ",2)!= -1){
         return "No Repeat";
     }
 
+    // challenge 33
+
+    public static Set leftJoin(HashMap <String,String> map1, HashMap <String,String> map2 ) {
+
+     Set<String> set=new HashSet<>();
+
+
+        for (String i:map1.keySet()
+             ) {
+//            if(map2.containsKey(i)) {    we don't need if to check if the key contain in second map because if the key not found will return null because String is object
+
+                set.add(" "+ i +" , " +map1.get(i)+" , "+ map2.get(i)+ "");
+//                    System.out.println(i + " Value " + map1.get(i));
+//                }
+//            else{
+//                set.add(" "+ i +" , " +map1.get(i)+" , "+ map2.get(i)+ "");
+//            }
+
+            }
+
+
+      return  set;
+    }
 
     public static void main(String[] args) {
 try {
 
-    System.out.println(repated("osama baniAta baniAta ahmad b5aniAta osama"));
+//    System.out.println(repated("osama baniAta baniAta ahmad b5aniAta osama"));
 }catch (Exception i){
     i.printStackTrace();
 }
 
+        HashMap <String,String> map1=new HashMap<>();
+map1.put("osama","2021");
+map1.put("ahmad","2055");
 
+        HashMap <String,String> map2=new HashMap<>();
+        map2.put("osama","Software Developer");
+        map2.put("a","22111");
+Set setLeftJoin= leftJoin(map1,map2);
+        for (Object o : setLeftJoin) {
+            System.out.println(o);
+        }
 //HashTable m=new HashTable(5);
 //m.push(15,"osama");
 //m.push(4,"Alli");
