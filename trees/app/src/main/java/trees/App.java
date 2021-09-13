@@ -5,6 +5,7 @@ package trees;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class App {
     public String getGreeting() {
@@ -77,30 +78,64 @@ public class App {
 
     public static void main(String[] args) {
 try {
-    BinaryTree bts=new BinaryTree();
-    bts.addBinaryTree(6,bts.root);
-    bts.addBinaryTree(9,bts.root);
-    bts.addBinaryTree(5,bts.root);
-    bts.addBinaryTree(3,bts.root);
-    bts.addBinaryTree(10,bts.root);
-    bts.addBinaryTree(1,bts.root);
-    bts.preOrder(bts.root);
-    System.out.println();
-    BinaryTree bts2=new BinaryTree();
-    bts2.addBinaryTree(5,bts2.root);
-    bts2.addBinaryTree(4,bts2.root);
-    bts2.addBinaryTree(10,bts2.root);
-    bts2.addBinaryTree(2,bts2.root);
-    bts2.addBinaryTree(8,bts2.root);
-    bts2.addBinaryTree(9,bts2.root);
-    bts2.preOrder(bts2.root);
-    System.out.println("#######");
 
-    List list;
-  list= treeIntersection(bts.root,bts2.root);
-    for (Object o : list) {
-        System.out.println(o);
+    Graphs graphs=new Graphs();
+    graphs.addVertex(1);
+    graphs.addVertex(2);
+    graphs.addVertex(3);
+    graphs.addVertex(4);
+    graphs.addVertex(5);
+
+         graphs.addEdge(1,2);
+         graphs.addEdge(1,3);
+         graphs.addEdge(3,2);
+         graphs.addEdge(3,4);
+         graphs.addEdge(5,2);
+         graphs.addEdge(5,4);
+
+    System.out.println(graphs.size());
+// return all nodes in graph
+
+      graphs.getNodes();
+
+List<Node> list =graphs.getNeighbors(1);
+    for (Node node : list) {
+        System.out.println(node.value);
     }
+
+//code challenge 36 Breadth First
+
+    Set<Node> set = graphs.breadthFirst((Node) graphs.adjVertices.keySet().toArray()[1]);
+    for (Node node : set) {
+        System.out.println(node.value);
+    }
+
+
+
+//    BinaryTree bts=new BinaryTree();
+//    bts.addBinaryTree(6,bts.root);
+//    bts.addBinaryTree(9,bts.root);
+//    bts.addBinaryTree(5,bts.root);
+//    bts.addBinaryTree(3,bts.root);
+//    bts.addBinaryTree(10,bts.root);
+//    bts.addBinaryTree(1,bts.root);
+//    bts.preOrder(bts.root);
+//    System.out.println();
+//    BinaryTree bts2=new BinaryTree();
+//    bts2.addBinaryTree(5,bts2.root);
+//    bts2.addBinaryTree(4,bts2.root);
+//    bts2.addBinaryTree(10,bts2.root);
+//    bts2.addBinaryTree(2,bts2.root);
+//    bts2.addBinaryTree(8,bts2.root);
+//    bts2.addBinaryTree(9,bts2.root);
+//    bts2.preOrder(bts2.root);
+//    System.out.println("#######");
+//
+//    List list;
+//  list= treeIntersection(bts.root,bts2.root);
+//    for (Object o : list) {
+//        System.out.println(o);
+//    }
 
 
 //    KAry root = new KAry(1, 2);

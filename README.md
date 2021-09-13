@@ -16,15 +16,10 @@
 |  tree fizz buzz  | [treefizzbuzz](day18/d18.md)      |
 |  bredthFirst | [bredthFirst](day17/d17.md)      |
 | max | [max](day16/d16.md)      |
-
 |Insertion sort | [insertionSort](sort/readme/d26.md)      |
-
 |MergeSort | [MergeSort](sort/readme/d26.md)      |
-
 |hash Table | [HashTable](day30/d30.md)      |
 |repreat | [Repeate](day31/d31.md)      |
-
 |tree intersection | [tree intersection](day32/d32.md)      |
 |leftJoin | [LeftJoin](day33/d33.md)      |
-
-
+|Graph 35 and Breadth 36 | [Graph 35 and Breadth method 36 ](day35/d35.md)  |

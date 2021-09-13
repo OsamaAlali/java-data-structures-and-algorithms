@@ -12,9 +12,42 @@ public class App {
 
     public static void main(String[] args) {
        LinkedList l1=new LinkedList();
+        l1.append(11);
+        l1.append(1);
         l1.append(1);
         l1.append(2);
+        l1.append(2);
         l1.append(3);
+        l1.append(4);
+        l1.append(4);
+        l1.append(4);
+        l1.append(4);
+        l1.append(15);
+        l1.append(5);
+        l1.append(5);
+        l1.append(10);
+        l1.append(9);
+        l1.append(8);
+        l1.append(7);
+
+
+
+
+//        l1.insertBefor(3,5);
+//        l1.print();
+//l1.remove(1);
+        try {
+            l1.removeFrequnce(l1.head);
+            System.out.println("Maxxx"+l1.max2(l1.head));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        System.out.println();
+        l1.print();
+
+
+
         LinkedList l2=new LinkedList();
         l2.append(5);
         l2.append(6);
@@ -27,19 +60,19 @@ public class App {
 
 
 
-LinkedList l3= new LinkedList();
-
-
-
-        System.out.println(l1.toString());
-        System.out.println(l2.toString());
-try {
-    l3= l3.zipLists( l1, l2 );
-    System.out.println("Ziplist: "+l3.toString());
-
-}catch (Exception e){
-    e.printStackTrace();
-}
+//LinkedList l3= new LinkedList();
+//
+//
+//
+//        System.out.println(l1.toString());
+//        System.out.println(l2.toString());
+//try {
+//    l3= l3.zipLists( l1, l2 );
+//    System.out.println("Ziplist: "+l3.toString());
+//
+//}catch (Exception e){
+//    e.printStackTrace();
+//}
 
 //        System.out.println(l1.size());
 //        System.out.println("KTH "+l1.kth(2));

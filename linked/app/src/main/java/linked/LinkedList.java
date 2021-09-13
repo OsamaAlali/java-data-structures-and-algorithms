@@ -17,6 +17,73 @@ public class LinkedList {
         }
     }
 
+    // remove elemnts
+    public void remove(int value){
+        // check if list null out from function
+//        if(head == null){
+//            return;
+//        }
+
+        Node serch;
+        serch =head;
+        Node befor= head;// point to the node befor the search node
+        while (serch != null){
+            if (head.value == value){
+                head = head.next;
+
+            }
+            if (serch.value == value){
+
+                if(serch.next != null) {
+                    serch = serch.next;
+                    befor.next = serch;
+                }else {
+                    befor.next = null;
+                }
+            }
+            befor=serch;
+            serch=serch.next;
+
+        }// end while
+
+    }
+
+    //rempve frequnce item
+    public void  removeFrequnce(Node head){
+        if (head.next == null  || head == null){
+           return;
+        }
+        Node search=head;
+        while (search.next != null){
+            if (search.value == search.next.value ){
+                search.next=search.next.next;
+            }else { search=search.next;}
+        }//end while Loop
+    }
+
+    public int max1(){
+        int max=-1;
+        Node search =head;
+
+        while (search !=null){
+            if (search.value > max){
+                max= search.value;
+            }
+            search=search.next;
+        }
+        return max;
+    }
+    int max =-1;
+    public  int max2(Node head){
+
+
+        if (head.value > max){
+            max=head.value;
+        }
+
+        return
+    }
+
     // Add element to last List;
     public void append (int val) {
         Node newNode = new Node(val);
@@ -74,7 +141,7 @@ public class LinkedList {
           Node search=head;
           Node newNode=new Node(newValue);
           Node holder=search;
-          while (search.next != null){
+          while (search != null){
 
               if (search.value == searchValue){
                   holder.next=newNode;
@@ -82,7 +149,7 @@ public class LinkedList {
                break;
               }
               holder=search;
-              System.out.println(holder.value);
+
               search=search.next;
           }
 
@@ -160,7 +227,7 @@ return -404;
     public String toString(){
         String msg="";
         if (!checkEmpty()) {
-            Node current = new Node();
+            Node current ;
             current = head;
 
             while (current != null) {
