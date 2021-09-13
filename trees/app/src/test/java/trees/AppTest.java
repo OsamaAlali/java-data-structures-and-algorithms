@@ -6,38 +6,77 @@ package trees;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
 
+    // Test Code challenge 35 and 36  Graphs and Bridth
+@Test void breadth(){
+    Graphs graphs=new Graphs();
+    graphs.addVertex(1);
+    graphs.addVertex(2);
+    graphs.addVertex(3);
+    graphs.addVertex(4);
+    graphs.addVertex(5);
+
+    graphs.addEdge(1,2);
+    graphs.addEdge(1,3);
+    graphs.addEdge(3,2);
+    graphs.addEdge(3,4);
+    graphs.addEdge(5,2);
+    graphs.addEdge(5,4);
+
+    // Test to get all node in graph
+
+    Set<Integer> set = new HashSet<>();
+    set.add(1);set.add(2);set.add(3);set.add(4);set.add(5);
+
+    assertEquals(set,graphs.getNodes());
+
+    // test size method and add node
+    assertEquals(5,graphs.size());
+
+    // test all neighbors
+    assertEquals(2,graphs.getNeighbors(4).size());
+    assertNotEquals(1,graphs.getNeighbors(1).size());
+
+    // Test Breadth
+        // its will return all enlement in graph in list contains node i test it count the size of list
+    assertEquals(5,graphs.breadthFirst((Node) graphs.adjVertices.keySet().toArray()[1]).size());
+}
+
+
+
     /// Test Challenge 32
 
-    @Test public  void treeInsert(){
-        BinaryTree bts=new BinaryTree();
-        bts.addBinaryTree(6,bts.root);
-        bts.addBinaryTree(9,bts.root);
-        bts.addBinaryTree(5,bts.root);
-        bts.addBinaryTree(3,bts.root);
-        bts.addBinaryTree(10,bts.root);
-        bts.addBinaryTree(1,bts.root);
-
-        BinaryTree bts2=new BinaryTree();
-        bts2.addBinaryTree(5,bts2.root);
-        bts2.addBinaryTree(4,bts2.root);
-        bts2.addBinaryTree(10,bts2.root);
-        bts2.addBinaryTree(2,bts2.root);
-        bts2.addBinaryTree(8,bts2.root);
-        bts2.addBinaryTree(9,bts2.root);
-
-        List<Integer> out = new ArrayList<Integer>();
-        out.add(5);
-        out.add(9);
-        out.add(10);
-
-        assertEquals(out,App.treeIntersection(bts.root,bts2.root));
-    }
+//    @Test public  void treeInsert(){
+//        BinaryTree bts=new BinaryTree();
+//        bts.addBinaryTree(6,bts.root);
+//        bts.addBinaryTree(9,bts.root);
+//        bts.addBinaryTree(5,bts.root);
+//        bts.addBinaryTree(3,bts.root);
+//        bts.addBinaryTree(10,bts.root);
+//        bts.addBinaryTree(1,bts.root);
+//
+//        BinaryTree bts2=new BinaryTree();
+//        bts2.addBinaryTree(5,bts2.root);
+//        bts2.addBinaryTree(4,bts2.root);
+//        bts2.addBinaryTree(10,bts2.root);
+//        bts2.addBinaryTree(2,bts2.root);
+//        bts2.addBinaryTree(8,bts2.root);
+//        bts2.addBinaryTree(9,bts2.root);
+//
+//        List<Integer> out = new ArrayList<Integer>();
+//        out.add(5);
+//        out.add(9);
+//        out.add(10);
+//
+//        assertEquals(out,App.treeIntersection(bts.root,bts2.root));
+//    }
 
 
 

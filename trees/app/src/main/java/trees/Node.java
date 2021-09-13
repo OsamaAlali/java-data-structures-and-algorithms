@@ -3,14 +3,14 @@ package trees;
 import java.util.List;
 import java.util.Objects;
 
-public class Node <T>{
-    Node  left;
+public class Node <T> {
+    Node left;
     int value;
     Node right;
-    Node  next;
+    Node next;
 
 
-    public Node(){
+    public Node() {
 
     }
 
@@ -19,17 +19,16 @@ public class Node <T>{
         this.value = value;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Node<?> node = (Node<?>) o;
-        return value == node.value && Objects.equals(left, node.left) && Objects.equals(right, node.right) && Objects.equals(next, node.next);
+        return value == node.value;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(left, value, right, next);
+        return Objects.hash(value);
     }
 }

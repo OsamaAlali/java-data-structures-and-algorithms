@@ -33,27 +33,29 @@ public class Graphs {
         }
         return set;
     }
+//public void tess(){
+//        Node node=adjVertices.keySet().stream().findFirst().get();
+//    System.out.println(node.value);
+//}
 
+    public  Set<Node>  breadthFirst(Node node){
+      Set <Node> visited=new HashSet<>();
+      Queue <Node> breadth= new Queue<Node>();
+         breadth.enqueue(node);
+       visited.add(node);
 
-//    public Set<Node> getNodes(){
-//
-//      Set <Node> visited=new HashSet<>();
-//      Queue <Node> breadth= new Queue<Node>();
-//         breadth.enqueue(adjVertices.keySet().stream().findFirst().get());
-//       visited.add(adjVertices.keySet().stream().findFirst().get());
-//
-//        while (!breadth.isEmpty()) {
-//            Node node = breadth.dequeue();
-//            for (Node v :  getNeighbors(node.value)) {
-//                if (!visited.contains(v)) {
-//                    visited.add(v);
-//                    breadth.enqueue(v);
-//                }
-//            }
-//        }
-//        return visited;
-//
-//    }
+        while (!breadth.isEmpty()) {
+            Node node1 = breadth.dequeue();
+            for (Node v :  getNeighbors(node1.value)) {
+                if (!visited.contains(v)) {
+                    visited.add(v);
+                    breadth.enqueue(v);
+                }
+            }
+        }
+        return visited;
+
+    }
 
 
     public List<Node> getNeighbors(int value){

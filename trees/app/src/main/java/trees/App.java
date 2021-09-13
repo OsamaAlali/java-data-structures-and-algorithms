@@ -5,6 +5,7 @@ package trees;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class App {
     public String getGreeting() {
@@ -92,15 +93,24 @@ try {
          graphs.addEdge(5,2);
          graphs.addEdge(5,4);
 
-//    System.out.println(graphs.size());
+    System.out.println(graphs.size());
 // return all nodes in graph
 
-//      graphs.getNodes();
+      graphs.getNodes();
 
 List<Node> list =graphs.getNeighbors(1);
     for (Node node : list) {
         System.out.println(node.value);
     }
+
+//code challenge 36 Breadth First
+
+    Set<Node> set = graphs.breadthFirst((Node) graphs.adjVertices.keySet().toArray()[1]);
+    for (Node node : set) {
+        System.out.println(node.value);
+    }
+
+
 
 //    BinaryTree bts=new BinaryTree();
 //    bts.addBinaryTree(6,bts.root);
