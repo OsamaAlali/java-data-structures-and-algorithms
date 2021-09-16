@@ -47,6 +47,11 @@ class AppTest {
     // Test Breadth
         // its will return all enlement in graph in list contains node i test it count the size of list
     assertEquals(5,graphs.breadthFirst((Node) graphs.adjVertices.keySet().toArray()[1]).size());
+
+    // Test Depth
+    // its will return all enlement in graph in list contains node i test it count the size of list
+    assertEquals(5,graphs.depthFirstTraversal((Node) graphs.adjVertices.keySet().toArray()[1]).size());
+
 }
 
 
