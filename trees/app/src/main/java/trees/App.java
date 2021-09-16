@@ -93,22 +93,36 @@ try {
          graphs.addEdge(5,2);
          graphs.addEdge(5,4);
 
-    System.out.println(graphs.size());
+//    System.out.println(graphs.size());
 // return all nodes in graph
 
-      graphs.getNodes();
+//      graphs.getNodes();
 
-List<Node> list =graphs.getNeighbors(1);
-    for (Node node : list) {
-        System.out.println(node.value);
-    }
+//List<Node> list =graphs.getNeighbors(1);
+//    for (Node node : list) {
+//        System.out.println(node.value);
+//    }
 
 //code challenge 36 Breadth First
 
-    Set<Node> set = graphs.breadthFirst((Node) graphs.adjVertices.keySet().toArray()[1]);
-    for (Node node : set) {
+//    Set<Node> set = graphs.breadthFirst((Node) graphs.adjVertices.keySet().toArray()[0]);
+//    for (Node node : set) {
+//        System.out.println(node.value);
+//    }
+
+// code challenge 38 Depth
+
+Set <Node>setDepth=graphs.depthFirstTraversal((Node) graphs.adjVertices.keySet().toArray()[0]);
+
+    for (Node node : setDepth) {
         System.out.println(node.value);
     }
+
+
+
+
+
+
 
 
 

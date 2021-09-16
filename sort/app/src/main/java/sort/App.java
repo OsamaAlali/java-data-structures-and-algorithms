@@ -8,22 +8,7 @@ import java.util.Arrays;
 
 public class App {
 
-//    public static int[] sort(int []arr){
-//        int k;
-//        int temp;
-//        for (int i=1; i< arr.length;i++) {
-//                k = arr[i];
-//                temp = i;
-//                while (temp > 0 && (arr[temp - 1] > k)) {
-//                        k = arr[temp];
-//                        arr[temp] = arr[temp - 1];
-//                        arr[temp - 1] = k;
-//                     --temp;
-//                    }
-//
-//        }
-//        return arr;
-//    }
+
 public static int[] quickSort(int []arr,int left,int right){
 if(left < right) {
     int position = partition(arr, left, right);

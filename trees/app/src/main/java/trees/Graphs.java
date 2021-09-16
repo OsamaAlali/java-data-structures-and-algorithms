@@ -57,6 +57,22 @@ public class Graphs {
 
     }
 
+    Set<Node> depthFirstTraversal( Node node) {
+        Set<Node> visited = new LinkedHashSet<Node>();
+        Stack<Node> stack = new Stack<Node>();
+        stack.push(node);
+        while (!stack.isEmpty()) {
+            Node vertex = stack.pop();
+            if (!visited.contains(vertex)) {
+                visited.add(vertex);
+                for (Node v : getNeighbors(vertex.value)) {
+                    stack.push(v);
+                }
+            }
+        }
+        return visited;
+    }
+
 
     public List<Node> getNeighbors(int value){
        return adjVertices.get(new Node(value));
@@ -64,5 +80,13 @@ public class Graphs {
 
     public int size(){
        return adjVertices.size();
+    }
+
+
+    @Override
+    public String toString() {
+        return "Graphs{" +
+                "adjVertices=" + adjVertices +
+                '}';
     }
 }
